@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .body{
+        display: flex;
+        height: 100vh;
+        flex-flow:column;
+        font-size: 16px;
+    }
+    .header{
+        background-color: #FF5400;
+        height: 3rem;
+    }
+    .header__menu{
+        display: flex;
+    }
+    .header__menu .menu-item{
+        list-style: none;
+        flex:1;
+        outline: 1px solid cyan;
+        line-height: 3rem;
+        text-align: center;
+        transition: flex .5s;
+    }
+    .header__menu .menu-item:hover{
+        flex:8;
+    }
+    .container{
+        /* background-color: #FF0054; */
+        display: flex;
+        height: inherit;
+    }
+    .container__content{
+        background-color: #7CB518;
+        /* flex: flex-grow | flex-shrink | flex-basis */
+        flex: 1;
+        display: flex;
+    }
+    .container__content .cat{
+        margin: 10px;
+        flex-grow: 1;
+        flex-basis: 1%;
+    }
+    .container__content .cat img{
+        width: 100%;
+    }
+    .container__aside{
+        background-color: #FFBD00;
+        /* flex: flex-grow | flex-shrink | flex-basis */
+        flex: 0 0 25%;
+    }
+    .footer{
+        background-color: #390099;
+        height: 6rem;
+        margin-top: auto;
+        outline: 1px solid red;
+    }
+</style>
+<body class="body">
+    <header class="header">
+        <ul class="header__menu">
+            <li class="menu-item">Home </li>
+            <li class="menu-item">Gallery</li>
+            <li class="menu-item">About</li>
+            <li class="menu-item">Contact</li>
+        </ul>
+    </header>
+    <section class="container">
+        <div class="container__content">
+            <div class="cat">
+                <img src='yisus.png'>
+            </div>
+            <div class="cat">
+                <img src='pescado.jpg'>
+            </div>
+            <div class="cat">
+                <img src='perfilmama.jpg'>
+            </div>
+            <div class="cat">
+                <img src='benj.jpg'>
+            </div>
+        </div>
+        <aside class="container__aside">aside</aside>
+    </section>
+    <footer class="footer">footer</footer>
+</body>
+</html>
